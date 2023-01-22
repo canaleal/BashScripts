@@ -58,37 +58,48 @@ fi
 # Install axios
 npm install axios
 
-# Install Jest
-npm i -D jest @types/jest ts-jest @testing-library/jest-dom svelte-jester @testing-library/svelte
+# Prompt the user to include jest
+while true; do
+    read -p "Include JEST Testing (Y/n): " has_jest
+    if [ "$has_jest" == "y" ] || [ "$has_jest" == "n" ]; then
+        break
+    fi
+done
 
-echo 'import "@testing-library/jest-dom";' >setupTests.ts
+if [ "$has_jest" == "y" ]; then
 
-echo 'export default {
-    transform: {
-        "^.+\\.svelte$": [
-            "svelte-jester",
-            { preprocess: "./svelte.config.test.cjs" },
-        ],
-        "^.+\\.ts$": "ts-jest",
-        "^.+\\.js$": "ts-jest",
-    },
-    moduleFileExtensions: ["js", "ts", "svelte"],
-    moduleNameMapper: {
-        "^\\$lib(.*)$": "<rootDir>/src/lib$1",
-        "^\\$app(.*)$": [
-            "<rootDir>/.svelte-kit/dev/runtime/app$1",
-            "<rootDir>/.svelte-kit/build/runtime/app$1",
-        ],
-    },
-    setupFilesAfterEnv: ["<rootDir>/jest-setup.ts"],
-    collectCoverageFrom: ["src/**/*.{ts,tsx,svelte,js,jsx}"],
-};' >jest.config.mjs
+    # Install Jest
+    npm i -D jest @types/jest ts-jest @testing-library/jest-dom svelte-jester @testing-library/svelte
 
-echo "const preprocess = require('svelte-preprocess');
-module.exports = { preprocess: preprocess() };" >svelte.config.test.cjs
+    echo 'import "@testing-library/jest-dom";' >setupTests.ts
 
-# Add Jest
-mkdir __tests__
+    echo 'export default {
+        transform: {
+            "^.+\\.svelte$": [
+                "svelte-jester",
+                { preprocess: "./svelte.config.test.cjs" },
+            ],
+            "^.+\\.ts$": "ts-jest",
+            "^.+\\.js$": "ts-jest",
+        },
+        moduleFileExtensions: ["js", "ts", "svelte"],
+        moduleNameMapper: {
+            "^\\$lib(.*)$": "<rootDir>/src/lib$1",
+            "^\\$app(.*)$": [
+                "<rootDir>/.svelte-kit/dev/runtime/app$1",
+                "<rootDir>/.svelte-kit/build/runtime/app$1",
+            ],
+        },
+        setupFilesAfterEnv: ["<rootDir>/jest-setup.ts"],
+        collectCoverageFrom: ["src/**/*.{ts,tsx,svelte,js,jsx}"],
+    };' >jest.config.mjs
+
+    echo "const preprocess = require('svelte-preprocess');
+    module.exports = { preprocess: preprocess() };" >svelte.config.test.cjs
+
+    # Add Jest
+    mkdir __tests__
+fi
 
 # Create a .env file
 touch .env
