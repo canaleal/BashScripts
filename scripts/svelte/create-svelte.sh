@@ -127,14 +127,30 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE." >LICENSE
 
-# Create a directory structure
-cd src
-mkdir constants params services components widgets types
-cd ..
+# Prompt the user to include jest
+while true; do
+    read -p "Include Directory Structure (Y/n): " has_dir_structure
+    if [ "$has_dir_structure" == "y" ] || [ "$has_dir_structure" == "n" ]; then
+        break
+    fi
+done
 
-# Create a directory structure for static assets
-cd static
-mkdir assets
-cd assets
-mkdir images fonts sounds videos
-cd ..
+if [ "$has_dir_structure" == "y" ]; then
+    # Create a directory structure
+    cd src
+    mkdir constants params services components widgets types
+    cd ..
+
+    # Create a directory structure for static assets
+    cd static
+    mkdir assets
+    cd assets
+    mkdir images fonts sounds videos
+    cd ..
+fi
+
+# Create a README.md file
+curl https://raw.githubusercontent.com/othneildrew/Best-README-Template/master/BLANK_README.md >README.md
+
+# Print success message
+echo "Successfully created a new Svelte project called $project_name"
