@@ -40,8 +40,9 @@ const config = {
 
 export default config;' >svelte.config.js
 
-echo 'module.exports = {
-  content: ["./src/**/*.{html,js,svelte,ts}"],
+echo '/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     extend: {}
   },
