@@ -1,68 +1,42 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+<div align="center">
+  <h1>Shell Scripts</h1>
+  <h4>Automation • Backup • Processing</h4>
+</div>
+
+<h1>Contents</h1>
+
+- [Overview](#overview)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Usage](#usage)
 
 
-# Bash Scripts
+<h1 id="overview">Overview</h1>
 
-A collection of shell scripts for various purposes.
+This project is a collection of shell scripts that can be used for various purposes. These scripts can be used for automating tasks, performing backups, managing files, and more. The scripts are designed to be simple and easy to use, even for those who are new to shell scripting.
 
-## Getting Started
+<h1>Technologies</h1>
+<div align="center" id="technologies">
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+Below is a table that provides an overview of the technologies used in this project.
+  
+<table>
+  <tr> 
+    <td align='center'><img src="https://img.shields.io/badge/bash-%23339933.svg?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Bash"/></td>
+    <td align='center'><img src="https://img.shields.io/badge/linux-%23FCC624.svg?style=for-the-badge&logo=linux&logoColor=black" alt="Linux"/></td>
+    <td align='center'><img src="https://img.shields.io/badge/windows-%230078D7.svg?style=for-the-badge&logo=windows&logoColor=white" alt="Windows"/></td>
+    <td align='center'><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></td>
+  </tr>
+ </table>
+</div>
 
+<h1 id="installation">Installation</h1>
 
-## Prerequisites
-
-You will need to have a Unix-based operating system and a terminal application installed in order to run these scripts.
-Installing
-
-Clone the repository to your local machine:
-
-```bash
-git clone https://github.com/canaleal/BashScripts.git
-```
-
-## Usage
-
-Navigate to the project directory and give the scripts execute permissions:
-
-cd BASHSCRIPTS
-chmod +x scriptname.sh
-
-Run the script:
-
-```bash
-./scriptname.sh
-```
+To use these scripts, simply clone the repository to your local machine.
 
 
-##  Built With
+<h1 id="usage">Usage</h1>
 
-    Bash - The shell used
+Once you have cloned the repository, you can run any of the scripts by navigating to the directory and executing the script with the following command:
 
-## Authors
-
-    Alex Canales - Initial work - https://github.com/canaleal
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE.md file for details
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/canaleal/BashScripts.svg?style=for-the-badge
-[contributors-url]: https://github.com/canaleal/BashScripts/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/canaleal/BashScripts.svg?style=for-the-badge
-[forks-url]: https://github.com/canaleal/BashScripts/network/members
-[stars-shield]: https://img.shields.io/github/stars/canaleal/BashScripts.svg?style=for-the-badge
-[stars-url]: https://github.com/canaleal/BashScripts/stargazers
-[issues-shield]: https://img.shields.io/github/issues/canaleal/BashScripts.svg?style=for-the-badge
-[issues-url]: https://github.com/canaleal/BashScripts/issues
-[license-shield]: https://img.shields.io/github/license/canaleal/BashScripts.svg?style=for-the-badge
-[license-url]: https://raw.githubusercontent.com/canaleal/BashScripts/main/LICENSE
-
-
-
+```./script-name.sh```
