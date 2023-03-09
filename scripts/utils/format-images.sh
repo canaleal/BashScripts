@@ -1,30 +1,41 @@
 #!/bin/bash
 
-# Prompt the user for the input directory path
-echo "Please enter the path to the input directory:"
-read input_dir
+# Prompt the user for the input directory path, validate that it exists and is a directory
+while true; do
+  echo "Please enter the path to the input directory:"
+  read input_dir
+  if [ ! -d "$input_dir" ]; then
+    echo "Input directory does not exist or is not a directory. Please try again."
+  else
+    break
+  fi
+done
 
-# Prompt the user for the output format
-echo "Please select the output format:"
-echo "1. JPG"
-echo "2. PNG"
-echo "3. WEBP"
-read output_format
+# Prompt the user for the output format, validate that it is a valid option
+while true; do
+  echo "Please select the output format:"
+  echo "1. JPG"
+  echo "2. PNG"
+  echo "3. WEBP"
+  read output_format
 
-case $output_format in
-  1)
-    output_ext="jpg"
-    ;;
-  2)
-    output_ext="png"
-    ;;
-  3)
-    output_ext="webp"
-    ;;
-  *)
-    echo "Invalid output format selected. Exiting."
-    exit 1
-esac
+  case $output_format in
+    1)
+      output_ext="jpg"
+      break
+      ;;
+    2)
+      output_ext="png"
+      break
+      ;;
+    3)
+      output_ext="webp"
+      break
+      ;;
+    *)
+      echo "Invalid output format selected. Please try again."
+  esac
+done
 
 # Set the output directory to be the same as the input directory
 output_dir="$input_dir"
