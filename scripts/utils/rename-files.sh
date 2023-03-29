@@ -21,7 +21,7 @@ file_count=$(ls "$dir_path"/*.$file_extension | wc -l)
 # loop through all files in the directory and rename them
 i=1
 for file in "$dir_path"/*.$file_extension; do
-  new_name=$(printf "$naming_convention.$file_extension" "$i")
+  new_name=$(printf "${naming_convention}%03d.$file_extension" "$i")
   mv "$file" "$dir_path/$new_name"
   echo "Renamed $file to $new_name"
   i=$((i+1))
