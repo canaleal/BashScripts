@@ -22,10 +22,10 @@ Below is a table that provides an overview of the technologies used in this proj
   
 <table>
   <tr> 
-    <td align='center'><img src="https://img.shields.io/badge/bash-%23339933.svg?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Bash"/></td>
-    <td align='center'><img src="https://img.shields.io/badge/linux-%23FCC624.svg?style=for-the-badge&logo=linux&logoColor=black" alt="Linux"/></td>
-    <td align='center'><img src="https://img.shields.io/badge/windows-%230078D7.svg?style=for-the-badge&logo=windows&logoColor=white" alt="Windows"/></td>
-    <td align='center'><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></td>
+    <td align='center'><img src="https://img.shields.io/badge/bash-%23121011.svg?style=for-the-badge&logo=gnu-bash" alt="Bash"/></td>
+    <td align='center'><img src="https://img.shields.io/badge/linux-%23121011.svg?style=for-the-badge&logo=linux" alt="Linux"/></td>
+    <td align='center'><img src="https://img.shields.io/badge/windows-%23121011.svg?style=for-the-badge&logo=windows" alt="Windows"/></td>
+    <td align='center'><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github" alt="GitHub"/></td>
   </tr>
  </table>
 </div>
