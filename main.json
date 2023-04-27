@@ -1,0 +1,49 @@
+[
+    {
+        "github" : [
+            {
+                "name": "repo-backup",
+                "description": "Backup your GitHub repositories with this simple script.",
+                "path": "./scripts/github/repo-backup.sh",
+                "type": "script"
+            
+            }
+        ],
+        "python" : [
+            {
+                "name": "create-python",
+                "description": "Create a python project with a virtual environment.",
+                "path": "./scripts/python/create-python.sh",
+                "type": "script"
+            }
+        ],
+        "utils": [
+            {
+                "name": "compress-images",
+                "description": "Compress images in a directory.",
+                "path": "./scripts/utils/compress-images.sh",
+                "type": "script"
+            },
+            {
+                "name": "format-images",
+                "description": "Format images in a directory.",
+                "path": "./scripts/utils/format-images.sh",
+                "type": "script"
+            },
+            {
+                "name": "merge-images-to-pdf",
+                "description": "Merge images to a pdf.",
+                "path": "./scripts/utils/merge-images-to-pdf.sh",
+                "type": "script"
+            },
+            {
+                "name": "rename-files",
+                "description": "Rename files in a directory.",
+                "path": "./scripts/utils/rename-files.sh",
+                "type": "script"
+            }
+
+
+        ]
+    }
+]
